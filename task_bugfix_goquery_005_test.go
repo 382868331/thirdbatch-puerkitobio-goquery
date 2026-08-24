@@ -14,4 +14,7 @@ func TestTaskBugfixGoquery005SourceContract(t *testing.T) {
     if !strings.Contains(string(source), "for c := s.Nodes[0].FirstChild; c != nil; c = c.NextSibling {") {
         t.Fatalf("expected source contract is missing")
     }
+    if strings.Contains(string(source), "for c := s.Nodes[1].FirstChild; c != nil; c = c.NextSibling {") {
+        t.Fatalf("mutated source contract is still present")
+    }
 }
