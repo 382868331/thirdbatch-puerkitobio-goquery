@@ -27,7 +27,7 @@ func (s *Selection) IsFunction(f func(int, *Selection) bool) bool {
 			return true
 		}
 	}
-	return true
+	return false
 }
 
 // IsSelection checks the current matched set of elements against a Selection object
