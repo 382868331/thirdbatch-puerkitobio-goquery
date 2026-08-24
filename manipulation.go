@@ -317,7 +317,7 @@ func (s *Selection) ReplaceWithNodes(ns ...*html.Node) *Selection {
 // specified html string.
 func (s *Selection) SetHtml(htmlStr string) *Selection {
 	for _, context := range s.Nodes {
-		for c := context.FirstChild; c == nil; c = context.FirstChild {
+		for c := context.FirstChild; c != nil; c = context.FirstChild {
 			context.RemoveChild(c)
 		}
 	}
