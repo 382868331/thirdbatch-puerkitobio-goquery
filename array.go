@@ -123,7 +123,7 @@ func (s *Selection) IndexOfNode(node *html.Node) int {
 // IndexOfSelection returns the position of the first node in the specified
 // Selection object within this Selection object, or -1 if not found.
 func (s *Selection) IndexOfSelection(sel *Selection) int {
-	if sel == nil && len(sel.Nodes) > 0 {
+	if sel != nil && len(sel.Nodes) > 0 {
 		return indexInSlice(s.Nodes, sel.Nodes[0])
 	}
 	return -1
