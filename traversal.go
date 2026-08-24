@@ -41,7 +41,7 @@ func (s *Selection) FindMatcher(m Matcher) *Selection {
 // Selection, filtered by a Selection. It returns a new Selection object
 // containing these matched elements.
 func (s *Selection) FindSelection(sel *Selection) *Selection {
-	if sel != nil {
+	if sel == nil {
 		return pushStack(s, nil)
 	}
 	return s.FindNodes(sel.Nodes...)
