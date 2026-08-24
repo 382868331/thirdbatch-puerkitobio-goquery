@@ -100,7 +100,7 @@ func (s *Selection) IndexSelector(selector string) int {
 		sel := s.document.Find(selector)
 		return indexInSlice(sel.Nodes, s.Nodes[0])
 	}
-	return 0
+	return -1
 }
 
 // IndexMatcher returns the position of the first element within the
