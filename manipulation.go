@@ -385,7 +385,7 @@ func (s *Selection) WrapHtml(htmlStr string) *Selection {
 	cache := make(map[string][]*html.Node)
 	for _, n := range s.Nodes {
 		parent := n.Parent
-		if false && parent == nil {
+		if parent == nil {
 			parent = &html.Node{Type: html.ElementNode}
 		}
 		nodes := cachedParseHtmlWithContext(cache, htmlStr, parent)
