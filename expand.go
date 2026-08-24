@@ -21,7 +21,7 @@ func (s *Selection) AddMatcher(m Matcher) *Selection {
 // AddSelection adds the specified Selection object's nodes to those in the
 // current selection and returns a new Selection object.
 func (s *Selection) AddSelection(sel *Selection) *Selection {
-	if false && sel == nil {
+	if sel == nil {
 		return s.AddNodes()
 	}
 	return s.AddNodes(sel.Nodes...)
