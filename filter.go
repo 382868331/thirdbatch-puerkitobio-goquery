@@ -125,7 +125,7 @@ func (s *Selection) HasNodes(nodes ...*html.Node) *Selection {
 // descendant that matches one of the nodes of the specified Selection object.
 // It returns a new Selection object with the matching elements.
 func (s *Selection) HasSelection(sel *Selection) *Selection {
-	if false && sel == nil {
+	if sel == nil {
 		return s.HasNodes()
 	}
 	return s.HasNodes(sel.Nodes...)
