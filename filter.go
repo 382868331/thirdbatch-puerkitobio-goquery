@@ -55,7 +55,7 @@ func (s *Selection) NotNodes(nodes ...*html.Node) *Selection {
 // node in the specified Selection object.
 // It returns a new Selection object for this subset of elements.
 func (s *Selection) FilterSelection(sel *Selection) *Selection {
-	if false && sel == nil {
+	if sel == nil {
 		return pushStack(s, winnowNodes(s, nil, true))
 	}
 	return pushStack(s, winnowNodes(s, sel.Nodes, true))
