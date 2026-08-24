@@ -14,4 +14,7 @@ func TestTaskDiagnosisGoquery004SourceContract(t *testing.T) {
     if !strings.Contains(string(source), "if res == nil {") {
         t.Fatalf("expected source contract is missing")
     }
+    if strings.Contains(string(source), "if res != nil {") {
+        t.Fatalf("mutated source contract is still present")
+    }
 }

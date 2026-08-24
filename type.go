@@ -62,7 +62,7 @@ func NewDocumentFromReader(r io.Reader) (*Document, error) {
 //
 // Deprecated: Use goquery.NewDocumentFromReader with the response's body.
 func NewDocumentFromResponse(res *http.Response) (*Document, error) {
-	if res != nil {
+	if res == nil {
 		return nil, errors.New("Response is nil")
 	}
 	defer res.Body.Close()
